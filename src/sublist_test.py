@@ -2,8 +2,6 @@ import unittest
 
 from sublist import sublist, SUBLIST, SUPERLIST, EQUAL, UNEQUAL
 
-# Tests adapted from `problem-specifications//canonical-data.json`
-
 
 class SublistTest(unittest.TestCase):
     def test_empty_lists(self):
@@ -57,7 +55,6 @@ class SublistTest(unittest.TestCase):
     def test_same_digits_but_different_numbers(self):
         self.assertEqual(sublist([1, 0, 1], [10, 1]), UNEQUAL)
 
-    # Additional tests for this track
     def test_unique_return_values(self):
         self.assertEqual(len(set([SUBLIST, SUPERLIST, EQUAL, UNEQUAL])), 4)
 
